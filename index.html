@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+        <title>CRUD</title>
+    </head>
+
+    <body>
+        <div class="container py-5">
+            <div class="group py-4 px-5 w-75 mx-auto">
+                <h1 class="my-3">CRUD System</h1>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="productNameInput" placeholder="Enter product name">
+                </div>
+                <div class="d-none alert-danger" id="productNameAlert">
+                    <h5>You must start Uppercase letter then from 3 to 8 lowercase letters</h5>
+                </div>
+
+                <div class="form-group">
+                    <input type="number" class="form-control" id="productPriceInput" placeholder="Enter product price">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="productCategoryInput" placeholder="Enter product category">
+                </div>
+                <div class="d-none alert-danger" id="productCategoryAlert">
+                    <h5>You must start Uppercase letter then from 1 to 8 lowercase letters</h5>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="productDescInput" rows="3" placeholder="Enter your feedback"></textarea>
+                </div>
+                <button id="addBtn" class="btn btn-outline-info">Add Product</button>
+            </div>
+        </div>
+
+        <div class="container">
+            <input id="searchInput" type="search" class="form-control w-75 mx-auto border-top-0 border-left-0 border-right-0" placeholder="Search Product">
+
+            <table class="table my-4">
+                <thead class="text-center text-success font-italic">
+                    <th>#</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Description</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody class="text-center font-italic text-white" id="productsBody"></tbody>
+            </table>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
